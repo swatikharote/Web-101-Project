@@ -10,26 +10,30 @@
     <link rel="stylesheet" href="./common/header.css">
     <link rel="stylesheet" href="./common/footer.css">
     <style>
-        .container button {
-            background-color: green;
-            color: white;
-            border: none;
-            padding: 5px;
-            border-radius: 3px;
-            margin-top: 10px;
-        }
-
-        .container input {
+        /* dinner plate game property */
+        .container input:not(input[type='checkbox']) {
             width: 100%;
-            height: 35px;
+            height: 30px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             border: 1px solid #55555569;
             border-radius: 5px;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
+        .container div a {
+            text-decoration: none;
+        }
+
+        .container div a:hover {
+            text-decoration: underline;
+        }
+
+        .container>div {
+            margin-top: 15px;
+        }
+
+        .container p {
+            font-weight: bold;
+            margin: 10px 0 5px 0;
         }
     </style>
 </head>
@@ -56,16 +60,21 @@
             <h1>Log in</h1>
             <p>Email</p>
             <input type="text" type="email">
-            <P>password</P>
+            <P>Password</P>
             <input type="text">
             <div>
-                <p> Remember me</p>
+
+                <p> <input type="checkbox" name="" id=""> Remember me</p>
             </div>
-            <div><button>Log in</button>
+            <div><button class="cutom-button">Log in</button>
             </div>
-            <p>sign up</p>
-            <p>Forgot your pssword?</p>
         </form>
+        <div>
+            <a href="./sign-up.html">Sign up</a>
+        </div>
+        <div>
+            <a href="./forgotPassword.html">Forgot your pssword?</a>
+        </div>
     </div>
 
 
