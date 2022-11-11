@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="./common/header.css">
+    <link rel="stylesheet" href="./common/footer.css">
+    <link rel="icon" href="./images/logo.png" type="image/icon type">
+    <style>
+        body {
+            font-family: ' helvetica neue', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        .container {
+            margin: 10px auto;
+        }
+
+        .child {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+
+        img {
+            width: 94%;
+            border: 1px solid #33333324;
+            border-radius: 8px;
+            height: 440px;
+            padding: 15px;
+        }
+
+        .left {
+            width: 32%;
+        }
+
+        .right {
+            width: 64%
+        }
+
+        .price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price h3 {
+            font-family: inherit;
+            font-weight: 500;
+            color: inherit;
+            font-size: 25px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+        }
+
+        .price>button {
+            width: 105px;
+            height: 55px;
+            border-radius: 5px;
+            border: 0;
+            background-color: #f0ad4e;
+            font-size: 16px;
+            color: white;
+            margin-right: 20px;
+        }
+
+        .click-here {
+            background-color: yellowgreen;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .click-here>p {
+            margin: 0;
+        }
+
+        .click-here~h3 {
+            font-size: 24px;
+            font-family: inherit;
+        }
+
+        table th {
+            text-align: left;
+        }
+
+        table {
+            font-size: 15px;
+        }
+
+        td,
+        th {
+            padding: 10px;
+        }
+
+        .child tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .right>div:nth-child(1) {
+            text-align: end;
+        }
+
+        .right>div>button {
+            color: white;
+            background-color: #5cb85c;
+            border: 0;
+            padding: 10px;
+            width: 120px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .right>table {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .right>table button {
+            border: 0;
+            background-color: #337ab7;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .bottom>div {
+            width: 100%;
+        }
+
+        .bottom table {
+            width: 100%;
+        }
+
+        .bottom th,
+        .bottom td {
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <div> <a href="./index.html"> BOOKWORM</a></div>
+        <div>
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div>
+            <nav>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./sign-in.html">Sign In</a>
+                <a href="./sign-up.html">Sign Up</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="links">
+            <a href="./ ">Home</a>
+            <a href="">Society</a>
+            <a href="">Polictics</a>
+            <a href="">Public Adminstation/a>
+                <a href="">Adminstration communiction strategy</a>
+        </div>
+
+        <div class="child">
+            <div class="left">
+                <img src="https://media.gettyimages.com/id/457207765/photo/man-sitting-on-sofa-reading-book.jpg?s=612x612&w=0&k=20&c=TRZRBjFst18CckczwzuX1BEfqY3qIDVlfEQuhUq1kcM="
+                    alt="">
+
+                <p>Buy it at <b>best price</b> from here</p>
+
+                <div class="price">
+                    <h3>Rs. 78</h3>
+                    <button>Buy Now</button>
+                </div>
+
+                <div class="click-here">
+                    <p>
+                        Get Instant Cashback when you pay using Amazon Pay... Click Here</p>
+                </div>
+
+                <h3>Book Specification</h3>
+                <table>
+                    <tr>
+                        <th>Binding</th>
+                        <td>Paper</td>
+                    </tr>
+                    <tr>
+                        <th>Language</th>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <th>Number of Pages</th>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th>Auther</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Publisher</th>
+                        <td> Bloomsbury Activity Books</td>
+                    </tr>
+                    <tr>
+                        <th>Isbn-10</th>
+                        <td>1526606453</td>
+                    </tr>
+                    <tr>
+                        <th>Isbn-13</th>
+                        <td>9781526606457</td>
+                    </tr>
+                    <tr>
+                        <th>Diamension</th>
+                        <td>21.49*0.79*27.51</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="right">
+                <div><button>Refresh Price</button></div>
+                <h1>A Visit to the Hospital Activity and Sticker Book</h1>
+                <div class="box">
+                    <h2>GKP's NTSE 2019-20 : Class X Guide</h2>
+                    <p>Have you ever been to the hospital? This brilliant activity and sticker book is the perfect way
+                        to
+                        introduce little ones who may be visiting the hospital for the first time. Meet the doctors,
+                        nurses,
+                        midwives and paramedics, find out which special tools they use to help people when they don't
+                        feel
+                        well, buy some lovely flowers at the gift shop and help the pharmacist fill the shelves with
+                        lots of
+                        medicines. Hospitals don't have to be scary after all - they can be lots of fun!An exciting
+                        surprise
+                        awaits at the end . meet all the newborn babies and match their tiny hats!With over 300 Stickers
+                        and
+                        packed with fun activities, including pick and choose, spot the difference, match the pairs,
+                        write a
+                        diary, mazes and even play Connect 4, this activity and sticker book is ideal for visiting
+                        hospitals.</p>
+                </div>
+
+
+                <table>
+                    <tr>
+                        <th>Store</th>
+                        <th>Price</th>
+                        <th>Buy Now</th>
+                    </tr>
+                    <tr>
+                        <td>Amazon, Paperback</td>
+                        <td> Rs. 92.0</td>
+                        <td><button>Buy Now</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <h2>How long would it take for you to read Finding Alphas: A Quantitative Approach to Building Trading
+                Strategies</h2>
+            <div class="box">
+                <p>Depending on your reading style, this is how much time you would take to complete reading this book.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            Reading Style</th>
+                        <td>Time To Finish The Book</td>
+                    </tr>
+                    <tr>
+                        <th>Slow</th>
+                        <td>64 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Average</th>
+                        <td> 32 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Good</th>
+                        <td>21 hours</td>
+                    </tr>
+                    <tr>
+                        <th>Excellent</th>
+                        <td>10 hours</td>
+                    </tr>
+                </table>
+                <div>
+                    <b>
+                        So if you are a Reader belonging in the Good category, and you read it daily for 1 hour, it will
+                        take you 21 days.
+                    </b>
+                    <p>Note: A slow reader usually reads 100 words per minute, an average reader 200 words per minute,
+                        an
+                        average reader 300 words per minute and an excellent leader reads about 600-1000 words per
+                        minute,
+                        however the comprehension may vary.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <h4>Get To Know Us</h4>
+        <ul>
+            <li>
+                <a href="./about.html"> About</a>
+            </li>
+            <li> <a href=" ./contact.html">Contact</a>
+            </li>
+            <li> <a href="./search.html">Search</a>
+            </li>
+            <li>
+                <a href="./privacy-policy.html">privacy policy</a>
+            </li>
+            <li>
+                <a href="./refund-policy.html">Refund policy</a>
+            </li>
+            <li>
+                <a href=" ./earn-Money-online.html"> Earn Money online</a>
+            </li>
+            <li>
+                <a href=" ./quickBuyer.html">QuickBuyer</a>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
