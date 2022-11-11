@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./common/footer.css">
     <title>Sign Up</title>
     <style>
-        .container>div>div {
+        .container>form>div {
             margin-top: 12px;
         }
 
@@ -41,25 +41,25 @@
 
     <div class="container">
         <h1>Sign up</h1>
-        <div>
+        <form>
             <p>Name</p>
-            <input class="input-custom" type="text">
+            <input class="input-custom" id="name" type="text">
             <p>Mobile number</p>
-            <input class="input-custom" type="number">
+            <input class="input-custom" id="mobnum" type="number">
             <p>Email</p>
-            <input class="input-custom" type="text">
+            <input class="input-custom" id="email" type="email">
             <p>Password <i>(6 characters minimum)</i> </p>
-            <input class="input-custom" type="text">
+            <input class="input-custom" id="password" minlength="6" type="text">
             <p>Password Confirmation</p>
-            <input class="input-custom" type="text">
+            <input class="input-custom" id="confPassword" minlength="6" type="text">
             <div>
-                <button class="cutom-button">Sign up</button>
+                <button type="submit" class="cutom-button">Sign up</button>
             </div>
             <div>
                 <a href="./sign-in.html">Log in</a>
             </div>
 
-        </div>
+        </form>
 
     </div>
 
@@ -92,6 +92,19 @@
 </body>
 
 </html>
-</body>
 
-</html>
+<script>
+    let form = document.querySelector("form");
+
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+
+        if (form.name.value == "" || form.mobnum.value == "" || form.email.value == "" || form.password.value == "" || form.confPassword.value == "") {
+            alert("please fill the form");
+        } else {
+            console.log("test");
+        }
+    });
+
+
+</script>

@@ -9,6 +9,51 @@
     <link rel="icon" href="./images/logo.png" type="image/icon type">
     <link rel="stylesheet" href="./common/header.css">
     <link rel="stylesheet" href="./common/footer.css">
+    <style>
+        .background {
+            zoom: 106%;
+            width: auto;
+            height: 800px;
+            background-image: url(https://ideakart.com/assets/youridea-23d18c0fab7feb4d66e4c1dbc419428c71b2014ff742fc52b4006f6b65af6b67.jpg);
+        }
+
+        .container {
+            font-size: 15px;
+        }
+
+        .container {
+            padding-top: 70px;
+            text-align: center;
+        }
+
+        .seprator {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .seprator>div {
+            width: 46%;
+            margin-top: 10px;
+        }
+
+        .text {
+            height: 100px;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .container>form>div:nth-child(2) {
+            margin-top: 10px;
+        }
+
+        * {
+            font-family: inherit;
+        }
+
+        .container input {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +72,51 @@
             </nav>
         </div>
     </div>
-    <div class="container"></div>
+
+    <div class="background">
+        <div class="container">
+
+            <div>You can contact our team by filling this form -</div>
+            <form action="">
+                <div>
+                    <div class="seprator">
+                        <div>
+                            <div><b>Firstname *</b></div>
+                            <input class="input-custom" type="text" placeholder="Please enter your firstname *">
+                        </div>
+
+                        <div>
+                            <div> <b>Lastname *</b></div>
+                            <input class="input-custom" type="text" placeholder="Please enter your lastname *">
+                        </div>
+                    </div>
+
+                    <div class="seprator">
+                        <div>
+                            <div><b>Email *</b></div>
+                            <input class="input-custom" type="text" placeholder="Please enter your email *">
+                        </div>
+
+                        <div>
+                            <div><b>Phone</b></div>
+                            <input class="input-custom" type="text" placeholder="Please enter your phone *">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div><b>Message *</b></div>
+                    <textarea class="input-custom text" name="" placeholder="Message for me *" id=""></textarea>
+                </div>
+
+                <div>
+                    <button class="cutom-button">Send message</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
 
     <div class="footer">
         <h4>Get To Know Us</h4>
