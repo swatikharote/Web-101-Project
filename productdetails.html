@@ -190,13 +190,14 @@
 
         <div class="child">
             <div class="left">
-                <img src="https://media.gettyimages.com/id/457207765/photo/man-sitting-on-sofa-reading-book.jpg?s=612x612&w=0&k=20&c=TRZRBjFst18CckczwzuX1BEfqY3qIDVlfEQuhUq1kcM="
+                <img id="image"
+                    src="https://media.gettyimages.com/id/457207765/photo/man-sitting-on-sofa-reading-book.jpg?s=612x612&w=0&k=20&c=TRZRBjFst18CckczwzuX1BEfqY3qIDVlfEQuhUq1kcM="
                     alt="">
 
                 <p>Buy it at <b>best price</b> from here</p>
 
                 <div class="price">
-                    <h3>Rs. 78</h3>
+                    <h3 id="price"></h3>
                     <button>Buy Now</button>
                 </div>
 
@@ -328,11 +329,6 @@
         </div>
     </div>
 
-
-
-
-
-
     <div class="footer">
         <h4>Get To Know Us</h4>
         <ul>
@@ -362,3 +358,18 @@
 </body>
 
 </html>
+
+<script>
+
+    let prodDtl = JSON.parse(localStorage.getItem('dtlItm')) || {};
+
+    let image = document.querySelector('#image');
+    image.src = prodDtl.book;
+
+    let price = document.querySelector('#price')
+    price.innerHTML = 'Rs. ' + prodDtl.price
+
+
+
+
+</script>
