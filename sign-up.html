@@ -49,9 +49,9 @@
             <p>Email</p>
             <input class="input-custom" id="email" type="email">
             <p>Password <i>(6 characters minimum)</i> </p>
-            <input class="input-custom" id="password" minlength="6" type="text">
+            <input class="input-custom" id="password" minlength="6" type="password">
             <p>Password Confirmation</p>
-            <input class="input-custom" id="confPassword" minlength="6" type="text">
+            <input class="input-custom" id="confPassword" minlength="6" type="password">
             <div>
                 <button type="submit" class="cutom-button">Sign up</button>
             </div>
@@ -99,10 +99,25 @@
     form.addEventListener("submit", event => {
         event.preventDefault();
 
+        let usrDtl = {
+            name: form.name.value,
+            mobile: form.mobnum.value,
+            email: form.email.value,
+            password: form.password.value,
+            confPassword: form.confPassword.value
+        };
+
         if (form.name.value == "" || form.mobnum.value == "" || form.email.value == "" || form.password.value == "" || form.confPassword.value == "") {
             alert("please fill the form");
         } else {
-            console.log("test");
+            if (usrDtl.password == usrDtl.confPassword) {
+                let users = JSON.parse(localStorage.getItem('userDetails')) || [];
+                users.push(usrDtl);
+                localStorage.setItem('userDetails', JSON.stringify(users));
+            } else {
+                alert("Password and Confirm password not matches")
+            }
+
         }
     });
 

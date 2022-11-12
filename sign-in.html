@@ -59,14 +59,13 @@
         <form action="">
             <h1>Log in</h1>
             <p>Email</p>
-            <input type="text" type="email">
+            <input type="text" type="email" id="email">
             <P>Password</P>
-            <input type="text">
+            <input type="password" id="password">
             <div>
-
                 <p> <input type="checkbox" name="" id=""> Remember me</p>
             </div>
-            <div><button class="cutom-button">Log in</button>
+            <div><button onclick="save()" class="cutom-button">Log in</button>
             </div>
         </form>
         <div>
@@ -103,3 +102,31 @@
         </ul>
     </div>
 </body>
+
+</html>
+
+<script>
+    let users = JSON.parse(localStorage.getItem('userDetails')) || [];
+
+    function save() {
+        let email = document.querySelector('#email').value;
+        let pass = document.querySelector('#password').value;
+
+        let flag = false;
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email == email && users[i].password == pass) {
+                alert("Login Successful");
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag) {
+            alert('User not found')
+        }
+
+
+    }
+
+
+</script>

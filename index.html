@@ -103,8 +103,6 @@
     fetch('https://636d40ab91576e19e3241a40.mockapi.io/api/getall')
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-
             data.forEach(ele => {
                 let div = document.createElement('div');
 
@@ -112,10 +110,13 @@
                 let bookName = document.createElement('p');
                 let price = document.createElement('p');
                 let underline = document.createElement('hr');
+
                 let seprator = document.createElement('div');
+
                 let viewDiv = document.createElement('div');
                 let viewNow = document.createElement('a');
                 let viewIcon = document.createElement('i');
+
                 let moreDiv = document.createElement('div');
                 let moreDtl = document.createElement('a');
                 let moreIcon = document.createElement('i');
@@ -124,10 +125,21 @@
                 bookName.innerText = ele.name;
                 price.innerText = ele.price;
                 viewNow.innerText = "View Now";
+                viewNow.href = './productdetails.html'
                 moreDtl.innerText = "More Details";
+                moreDtl.href = './productdetails.html'
                 seprator.className = 'child';
                 viewIcon.className = "fa fa-shopping-cart";
                 moreIcon.className = "fa fa-list"
+
+                //event listeners
+                viewNow.addEventListener('click', () => {
+                    localStorage.setItem('dtlItm', JSON.stringify(ele));
+                })
+
+                moreDtl.addEventListener('click', () => {
+                    localStorage.setItem('dtlItm', JSON.stringify(ele));
+                })
 
                 viewDiv.append(viewIcon, viewNow);
                 moreDiv.append(moreIcon, moreDtl);
