@@ -58,7 +58,6 @@
             <div>
                 <a href="./sign-in.html">Log in</a>
             </div>
-
         </form>
 
     </div>
@@ -114,6 +113,7 @@
                 let users = JSON.parse(localStorage.getItem('userDetails')) || [];
                 users.push(usrDtl);
                 localStorage.setItem('userDetails', JSON.stringify(users));
+                alert("user created")
             } else {
                 alert("Password and Confirm password not matches")
             }
